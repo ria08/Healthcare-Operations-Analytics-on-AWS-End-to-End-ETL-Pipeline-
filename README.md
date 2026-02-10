@@ -171,12 +171,10 @@ Potential enhancements:
 Healthcare-Operations-Analytics-on-AWS-End-to-End-ETL-Pipeline-/
 ├── README.md
 ├── architecture/
-│   └── readit.txt
+│   └── architecture.webp
 ├── dashboard/
 │   ├── healthcare dashboard.png
-│   └── placeholder.txt
 ├── databrew_cleaning/
-│   ├── clean.txt
 │   └── data_cleaning.png
 ├── pyspark/
 │   ├── 1.initialise_job.png
@@ -185,10 +183,8 @@ Healthcare-Operations-Analytics-on-AWS-End-to-End-ETL-Pipeline-/
 │   ├── 4.dimension_mapping.png
 │   ├── 5.patient_volume_by_admission_type.png
 │   ├── 6.commit_job.png
-│   └── readd.txt
 └── storage/
     ├── s3_layers.png
-    └── ss.txt
 ```
 
 ```
