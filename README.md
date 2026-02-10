@@ -4,7 +4,7 @@
 
 This project implements an end-to-end cloud-based ETL and analytics pipeline on AWS to analyze hospital operations data. The pipeline transforms raw healthcare encounter data into curated, business-ready datasets and interactive visualizations to support operational decision-making.
 
-It covers the full analytics lifecycle—from raw ingestion to dashboard consumption—using managed AWS services.
+It covers the full analytics lifecycle,from raw ingestion to dashboard consumption, using managed AWS services.
 
 ## Business Problem
 
@@ -100,7 +100,6 @@ Custom AWS Glue PySpark jobs generate curated analytics tables, including:
 - Total patient visits by department
 - Average length of stay by medical specialty
 - Mapping numeric admission type IDs to business-readable categories
-- Grouping low-frequency categories into an **Other** bucket
 
 Curated outputs are stored in Amazon S3 in **Parquet** format for query efficiency.
 
