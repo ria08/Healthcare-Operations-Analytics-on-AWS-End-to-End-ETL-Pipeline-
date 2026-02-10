@@ -7,6 +7,7 @@ This project implements an end-to-end cloud-based ETL and analytics pipeline on 
 It covers the full analytics lifecycle,from raw ingestion to dashboard consumption, using managed AWS services.
 
 Checkout my medium article where I do a walkthrough of my project in detail.
+
 **Link**: https://medium.com/@singhria.0829/end-to-end-aws-healthcare-etl-project-breakdown-66582b2f197b
 
 ## Business Problem
