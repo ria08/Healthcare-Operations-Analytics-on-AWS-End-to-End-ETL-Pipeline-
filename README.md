@@ -6,6 +6,8 @@ This project implements an end-to-end cloud-based ETL and analytics pipeline on 
 
 It covers the full analytics lifecycle,from raw ingestion to dashboard consumption, using managed AWS services.
 
+Checkout my medium article where I do a walkthrough of my project in detail.
+
 ## Business Problem
 
 Hospitals generate large volumes of operational data, but decision-makers often lack clear insights into:
