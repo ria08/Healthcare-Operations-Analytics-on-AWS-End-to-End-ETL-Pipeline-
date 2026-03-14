@@ -237,8 +237,8 @@ Healthcare-Operations-Analytics-on-AWS/
 ├── architecture/
 │   └── architecture.webp
 ├── pyspark/
-│   ├── kpi_job1_avg_los_admission_type.py
-│   └── kpi_job2_readmission_kpis.py
+│   ├── KPI Job1.py
+│   └── KPI Job2.py
 ├── athena_queries/
 │   └── exploration_queries.sql
 ├── dashboard/
