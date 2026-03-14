@@ -132,10 +132,10 @@ Using Cardiology (7.9% 30-day readmission rate) as the benchmark; the highest-vo
 | Nephrology | 1,613 | 15.4% | 121 |
 | Surgery-General | 3,099 | 11.0% | 96 |
 
-### Finding 2 — Nephrology is the Most Inefficient High-Volume Department
+### Finding 2: Nephrology is the Most Inefficient High-Volume Department
 Nephrology handles 1,613 patients with a 15.4% 30-day readmission rate and 5.02-day average stay- nearly double the readmission rate of top-performing departments and the longest average stay among high-volume specialties. Efficiency score: **46.8 / 100** -lowest of all departments with 500+ visits.
 
-### Finding 3 — Department Efficiency Score (0–100)
+### Finding 3: Department Efficiency Score (0–100)
 A composite efficiency score was built by combining normalised avg LOS and 30-day readmission rate (weighted 50/50):
 
 | Department | Visits | Avg LOS | Readmit Rate | Efficiency Score |
@@ -146,7 +146,7 @@ A composite efficiency score was built by combining normalised avg LOS and 30-da
 | Family/GeneralPractice | 7,440 | 4.36 days | 11.9% | 64.6 |
 | Nephrology | 1,613 | 5.02 days | 15.4% | 46.8 |
 
-### Finding 4 — Counterintuitive Age Pattern
+### Finding 4: Counterintuitive Age Pattern
 Expected: elderly patients have the highest readmission rates. Actual finding: **patients aged 20–30 had the highest 30-day readmission rate at 14.2%** -higher than every other age group including 80–90 year olds (12.1%). This likely reflects medication compliance and chronic disease management challenges in younger diabetic patients.
 
 | Age Group | Total Patients | 30-Day Readmission Rate |
@@ -156,13 +156,13 @@ Expected: elderly patients have the highest readmission rates. Actual finding: *
 | [70-80) | 26,068 | 11.8% |
 | [50-60) | 17,256 | 9.7% |
 
-### Finding 5 — Insulin Adjustment is a Readmission Risk Signal
+### Finding 5: Insulin Adjustment is a Readmission Risk Signal
 Patients whose insulin dosage was changed during their hospital visit (Up or Down) had meaningfully higher 30-day readmission rates than patients on no insulin:
 - Insulin Down: 13.9% readmission rate
 - Insulin Up: 13.0% readmission rate
 - No insulin: 10.0% readmission rate
 
-### Finding 6 — Highest Risk Patient Combination
+### Finding 6: Highest Risk Patient Combination
 The riskiest patient group: **[20-30) age band with insulin increased (Up)** -21.0% 30-day readmission rate. 1 in 5 of these patients returned within 30 days. This points to a specific, actionable follow-up opportunity post-discharge.
 
 ---
