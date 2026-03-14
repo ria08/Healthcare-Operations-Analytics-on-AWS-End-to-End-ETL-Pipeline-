@@ -97,12 +97,12 @@ Output written to S3 cleaned layer, registered in Glue Catalog under `healthcare
 
 **Note:** The `medical_specialty` column retained `?` placeholders (49% of records) in the cleaned output- this was intentionally resolved in the PySpark ETL layer (Step 3) by standardising to `"Unknown"` before aggregation, as it was a transformation decision tied to KPI logic rather than a structural cleaning step. The `patient_nbr` field contains expected duplicates- the same patient can have multiple encounters, which is standard in hospital datasets.
 
-### Step 3: Curated KPI Development (AWS Glue PySpark — Job 1)
+### Step 3: Curated KPI Development (AWS Glue PySpark-Job 1)
 First Glue ETL job produced two operational KPIs:
 - **Avg Length of Stay by Department** - grouped by `medical_specialty`, handled nulls and `?` values, computed average `time_in_hospital` and total visits
 - **Patient Volume by Admission Type** - mapped numeric `admission_type_id` to readable labels (Emergency, Elective, Urgent etc.) via a dimension table join; required explicit type casting to fix a silent Spark join failure
 
-### Step 4: Readmission KPI Development (AWS Glue PySpark — Job 2)
+### Step 4: Readmission KPI Development (AWS Glue PySpark-Job 2)
 Second Glue ETL job joined the cleaned data back to the raw source to recover `age` and `insulin` columns (dropped during DataBrew cleaning), then produced three additional KPIs:
 - **Readmission by Department** -30-day readmission rate, any readmission rate, and a composite efficiency score per department
 - **Readmission by Age** -30-day readmission rate across age bands ([0-10) through [90-100))
