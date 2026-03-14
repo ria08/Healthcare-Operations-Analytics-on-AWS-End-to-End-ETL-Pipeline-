@@ -158,9 +158,9 @@ Expected: elderly patients have the highest readmission rates. Actual finding: *
 
 ### Finding 5 — Insulin Adjustment is a Readmission Risk Signal
 Patients whose insulin dosage was changed during their hospital visit (Up or Down) had meaningfully higher 30-day readmission rates than patients on no insulin:
-- Insulin Down: **13.9%** readmission rate
-- Insulin Up: **13.0%** readmission rate
-- No insulin: **10.0%** readmission rate
+- Insulin Down: 13.9% readmission rate
+- Insulin Up: 13.0% readmission rate
+- No insulin: 10.0% readmission rate
 
 ### Finding 6 — Highest Risk Patient Combination
 The riskiest patient group: **[20-30) age band with insulin increased (Up)** -21.0% 30-day readmission rate. 1 in 5 of these patients returned within 30 days. This points to a specific, actionable follow-up opportunity post-discharge.
@@ -183,51 +183,7 @@ Six visuals published in Amazon QuickSight:
 
 Dashboard screenshots available in the `dashboard/` folder.
 
----
-
-## Athena SQL Exploration
-
-Key queries written during the analysis phase to validate outputs and surface insights:
-
-```sql
--- Excess readmissions vs Cardiology benchmark
-SELECT
-    medical_specialty,
-    total_visits,
-    readmit_30_day_rate_pct,
-    readmit_30_day_count,
-    ROUND((readmit_30_day_rate_pct - 7.9) / 100 * total_visits) AS excess_readmissions
-FROM readmission_by_department
-WHERE readmit_30_day_rate_pct > 7.9
-AND total_visits >= 500
-ORDER BY excess_readmissions DESC;
-
--- Department efficiency band classification
-SELECT
-    medical_specialty,
-    total_visits,
-    avg_los_days,
-    readmit_30_day_rate_pct,
-    efficiency_score,
-    CASE
-        WHEN efficiency_score >= 80 THEN 'High Efficiency'
-        WHEN efficiency_score >= 50 THEN 'Medium Efficiency'
-        ELSE 'Low Efficiency'
-    END AS efficiency_band
-FROM readmission_by_department
-WHERE total_visits >= 500
-ORDER BY efficiency_score DESC;
-
--- Total excess readmissions across all underperforming departments
-SELECT
-    SUM(ROUND((readmit_30_day_rate_pct - 7.9) / 100 * total_visits)) AS total_excess_readmissions,
-    COUNT(medical_specialty) AS departments_above_benchmark
-FROM readmission_by_department
-WHERE readmit_30_day_rate_pct > 7.9
-AND total_visits >= 500;
-```
-
-Full query set available in the `athena_queries/` folder.
+![Healthcare Operations Dashboard](dashboard/healthcare_operations_dashboard.png)
 
 ---
 
